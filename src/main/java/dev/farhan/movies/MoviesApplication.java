@@ -2,6 +2,7 @@ package dev.farhan.movies;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class MoviesApplication {
@@ -10,6 +11,9 @@ public class MoviesApplication {
         SpringApplication.run(MoviesApplication.class, args);
     }
 
-
+    @GetMapping("/root")
+    public String apiHellow(){
+        return "Hellow World";
+    }
 
 }
